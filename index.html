@@ -1,50 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<title>Decrypt</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<div id="decryptedText">Hi</div>
-
-<script>
-    // The encrypted string you want to decrypt
-    var encryptedString = "U2FsdGVkX1/Iw3Z4LhKtAIgrwef42L4Nh2zIhLFHDbC7sRKPktz4VSgdVhytkZ8/hU2auF01vLW1dofNQ79lCBZYN0zz6rACmPD1f2t94zP95hcm4QXZG5jGiblzuXutBTvUBY1TezKT/uG2EYg5bWG4YenzoIFUrTXZ/O6bRmeQkMSh8O4lYytgLFNcJi0PQ8msDdOinxr8pUB25xGJTUsCSW9xO0Grk8tmR3GJOWA4W6+C2e26Q9lCtXysEaEAVQnreZM4/LGObI1fbriWdVUTCNcDo0fwwngxT2OTize+IkjMDZek3aTt8UmNvnC9";
-  
-    // The decryption key
-    var decryptionKey = "~~~~####Adr1anA####~~~~";
-  
-    // Decrypt the string using CryptoJS
-    var decrypted = CryptoJS.AES.decrypt(encryptedString, decryptionKey).toString(CryptoJS.enc.Utf8);
-  
-    // Display the decrypted result in the HTML element
-    document.getElementById("decryptedText").textContent = decrypted;
-
-
-    fetch('https://www.wipo.int/patinformed/api/search', {
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json, text/plain, */*',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Content-Type': 'application/json',
-    'Host': 'www.wipo.int',
-  },
-})
-  .then(response => response.json())
-  .then(data => {
-    // Handle the response data here
-    console.log(data);
-  })
-  .catch(error => {
-    // Handle any errors that occurred during the request
-    console.error(error);
-  });
-
-
-
-
-</script>
-
-
-  
-
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
